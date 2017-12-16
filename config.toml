@@ -2,3 +2,6 @@ baseURL = "https://ducode.org/"
 languageCode = "en-us"
 title = "Ducode"
 theme = "ananke"
+
+[params]
+  description = "About programming and about everything else"
