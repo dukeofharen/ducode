@@ -1,0 +1,4 @@
+baseURL = "https://ducode.org/"
+languageCode = "en-us"
+title = "Ducode"
+theme = "ananke"
