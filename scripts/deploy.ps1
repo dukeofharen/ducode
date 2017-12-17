@@ -75,6 +75,7 @@ $session = New-Object WinSCP.Session
 try
 {
     $localDirectory = Join-Path -Path $PSScriptRoot $env:local_directory
+    Write-Host "Public directory: $localDirectory"
     $session.add_FileTransferred( { FileTransferred($_) } )
     $session.Open($sessionOptions)
     $synchronizationResult = $session.SynchronizeDirectories([WinSCP.SynchronizationMode]::Remote, $localDirectory, $env:remote_directory, $True, $True)
