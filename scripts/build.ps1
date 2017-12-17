@@ -10,7 +10,11 @@ function Assert-Cmd-Ok
 }
 
 $sitePath = Join-Path -Path $PSScriptRoot ".."
+$htaccessPath = Join-Path -Path $PSScriptRoot "..\.htaccess"
+$publicPath = Join-Path -Path $sitePath "public"
 
 $env:HUGO_ENV = "production"
 & cmd /c "cd $sitePath && hugo"
 Assert-Cmd-Ok
+
+Copy-Item $htaccessPath $publicPath

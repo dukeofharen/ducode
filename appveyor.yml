@@ -4,7 +4,7 @@ install:
 
 environment:
   relative_local_directory: ..\public
-  remote_directory: /public_html
+  remote_directory: /private_html
   ftp_host: ducode.org
   ftp_username:
     secure: 2m0LRawKxFr6rsAdgiehNQ==
