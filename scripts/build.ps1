@@ -9,6 +9,8 @@ function Assert-Cmd-Ok
     }
 }
 
+$sitePath = Join-Path -Path $PSScriptRoot ".."
+
 $env:HUGO_ENV = "production"
-& cmd /c "cd .. && hugo --uglyURLs"
+& cmd /c "cd $sitePath && hugo --uglyURLs"
 Assert-Cmd-Ok
