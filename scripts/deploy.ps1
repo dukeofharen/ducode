@@ -1,20 +1,3 @@
-Param(
-[Parameter(Mandatory=$True)]
-[string]$host,
-
-[Parameter(Mandatory=$True)]
-[string]$username,
-
-[Parameter(Mandatory=$True)]
-[string]$password,
-
-[Parameter(Mandatory=$True)]
-[string]$localDirectory,
-
-[Parameter(Mandatory=$True)]
-[string]$remoteDirectory
-)
-
 $ErrorActionPreference = 'Stop'
 
 function FileTransferred
@@ -83,9 +66,9 @@ Add-Type -Path $winscpType
 
 $sessionOptions = New-Object WinSCP.SessionOptions -Property @{
     Protocol = [WinSCP.Protocol]::Ftp
-    HostName = $host
-    UserName = $username
-    Password = $password
+    HostName = $env:ftp_host
+    UserName = $env:ftp_username
+    Password = $env:ftp_password
 }
 
 $session = New-Object WinSCP.Session
@@ -93,7 +76,7 @@ try
 {
     $session.add_FileTransferred( { FileTransferred($_) } )
     $session.Open($sessionOptions)
-    $synchronizationResult = $session.SynchronizeDirectories([WinSCP.SynchronizationMode]::Remote, $localDirectory, $remoteDirectory, $True, $True)
+    $synchronizationResult = $session.SynchronizeDirectories([WinSCP.SynchronizationMode]::Remote, $env:local_directory, $env:remote_directory, $True, $True)
     $synchronizationResult.Check()
 }
 finally
