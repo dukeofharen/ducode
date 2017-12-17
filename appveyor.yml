@@ -18,6 +18,6 @@ build_script:
   - ps: scripts\build.ps1
 
 deploy_script:
-  - ps: scripts\deploy.ps1
+  - ps: scripts\deploy.ps1 -host "$(ftp_host)" -username "$(ftp_username)" -password "$(ftp_password)" -localDirectory "$(local_directory)" -remoteDirectory "$(remote_directory)"
 
 test: off
