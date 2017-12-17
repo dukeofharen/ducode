@@ -11,6 +11,11 @@ environment:
   ftp_password:
     secure: 6g36EHlTaBrJQIoEm1L81DIoHdmJNh1TjPdjox/OdT8=
 
+artifacts:
+  - path: public
+    name: ducode
+    type: zip
+
 branches:
   only:
     - master
