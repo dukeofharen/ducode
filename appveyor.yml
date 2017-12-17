@@ -1,5 +1,6 @@
 install:
   - choco install winscp
+  - choco install hugo
 
 environment:
   local_directory: public
