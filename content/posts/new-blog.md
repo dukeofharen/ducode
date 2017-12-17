@@ -3,6 +3,8 @@ title: "New Blog"
 date: 2017-12-17T21:58:42+01:00
 draft: false
 featured_image: "new-blog.jpg"
+tags: ["hugo", "static site"]
+categories: ["hugo"]
 ---
 
 Hi,
