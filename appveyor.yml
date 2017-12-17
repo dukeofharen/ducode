@@ -3,20 +3,19 @@ install:
   - choco install hugo
 
 environment:
-  local_directory: public
+  relative_local_directory: ..\public
   remote_directory: /public_html
   ftp_host: ducode.org
   ftp_username:
     secure: 2m0LRawKxFr6rsAdgiehNQ==
   ftp_password:
-    secure: uaXXInmhsy+xpN7okDKsWzXuPw5A6NeB7Pvh+DSvcCs=
+    secure: 6g36EHlTaBrJQIoEm1L81DIoHdmJNh1TjPdjox/OdT8=
 
 branches:
   only:
     - master
 
 build_script:
-  - ps: "Get-ChildItem Env:"
   - ps: scripts\build.ps1
 
 deploy_script:
