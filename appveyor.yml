@@ -1,0 +1,23 @@
+install:
+  - choco install winscp
+
+environment:
+  local_directory: public
+  remote_directory: /public_html
+  ftp_host: ducode.org
+  ftp_username:
+    secure: 2m0LRawKxFr6rsAdgiehNQ==
+  ftp_password:
+    secure: uaXXInmhsy+xpN7okDKsWzXuPw5A6NeB7Pvh+DSvcCs=
+
+branches:
+  only:
+    - master
+
+build_script:
+  - ps: scripts\build.ps1
+
+deploy_script:
+  - ps: scripts\deploy.ps1
+
+test: off
