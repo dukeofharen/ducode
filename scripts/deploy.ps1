@@ -74,7 +74,7 @@ $sessionOptions = New-Object WinSCP.SessionOptions -Property @{
 $session = New-Object WinSCP.Session
 try
 {
-    $localDirectory = Join-Path -Path $PSScriptRoot $env:local_directory
+    $localDirectory = Join-Path -Path $PSScriptRoot $env:relative_local_directory
     Write-Host "Public directory: $localDirectory"
     $session.add_FileTransferred( { FileTransferred($_) } )
     $session.Open($sessionOptions)
