@@ -12,5 +12,5 @@ function Assert-Cmd-Ok
 $sitePath = Join-Path -Path $PSScriptRoot ".."
 
 $env:HUGO_ENV = "production"
-& cmd /c "cd $sitePath && hugo --uglyURLs"
+& cmd /c "cd $sitePath && hugo"
 Assert-Cmd-Ok
