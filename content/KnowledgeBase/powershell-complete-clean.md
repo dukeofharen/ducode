@@ -8,7 +8,7 @@ categories: ["powershell", ".net"]
 
 Hi,
 
-Everybody who works with Visual Studio (no matter which version) has probably, at some point, ran a "Clean solution" on your project, only to discover that nothing was cleaned. In other cases, your code doesn't build for no reason. In this case, it might help to run this little PowerShell oneliner:
+Everybody who works with Visual Studio (no matter which version) has probably, at some point, ran a "Clean solution" on the project, only to discover that nothing was cleaned. In other cases, your code doesn't build for no reason. In this case, it might help to run this little PowerShell oneliner:
 
 ```
 Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
