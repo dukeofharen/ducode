@@ -1,14 +1,15 @@
 ---
 title: "Configuration validation in .NET Core"
-date: 2018-01-16T20:08:02+01:00
-draft: true
+date: 2018-01-21T20:08:02+01:00
+draft: false
+featured_image: "header-config-validation.jpg"
 tags: [".net core", "c#"]
 categories: [".net core"]
 ---
 
 Hi,
 
-TLDR: not interested in reading the whole thing? The GitHub link to the repository is at the bottom of the page.
+TLDR: Configuration validation using the .NET Core configuration and data annotations library. Not interested in reading the whole thing? The GitHub link to the repository is at the bottom of the page.
 
 The customer I currently work at has a large and very intricate collection of .NET reusable libraries. One of these libraries contains code to validate and read custom configuration sections in Web.config and App.config files. With the dawn of .NET Core, the "classic" configuration model is replaced by a newer and more modular one. The new .NET Core configuration libraries enable you to use any sort of configuration file (e.g. JSON files, XML files, YAML files etc.) and also simplifies the deserialization of said file to an object.
 
@@ -125,7 +126,7 @@ This class needs an instance of IOptionsMonitor (a part of the .NET Core configu
 
 ## ValidateObject attribute
 
-While looking for a way to recursively validate an object, I found this article: <http://www.technofattie.com/2011/10/05/recursive-validation-using-dataannotations.html>. In this article, a custom validation attribute valled `ValidateObjectAttribute` is used to expicitely tell the ModelValidator that it also has to validate this property. I modified the code a bit to also allow IEnumerables to be validated.
+While looking for a way to recursively validate an object, I found this article: <http://www.technofattie.com/2011/10/05/recursive-validation-using-dataannotations.html>. In this article, a custom validation attribute called `ValidateObjectAttribute` is used to explicitely tell the ModelValidator that it also has to validate this property. I modified the code a bit to also allow IEnumerables to be validated.
 
 ```
 public class ValidateObjectAttribute : ValidationAttribute
@@ -305,6 +306,8 @@ public class HomeController : Controller
 }
 ```
 
+![Result](/config-validation.png)
+
 ## Finally
 
 There's nothing more to it than this. This is a nice example of how two existing components of the .NET library can work together to make something completely new. Also, I want to thank [Josh Carroll](http://www.technofattie.com) for his article on recursive validation.
@@ -312,3 +315,5 @@ There's nothing more to it than this. This is a nice example of how two existing
 Oh yeah, not focussed on in this article, but it is really easy to build a few unit tests for your configuration to check a few scenarios.
 
 I've uploaded the complete source code to my GitHub account on <https://github.com/dukeofharen/ducodes>.
+
+_Image by [faikerdogan](https://pixabay.com/en/marine-water-ship-boat-port-beach-3084143/)_
