@@ -6,8 +6,3 @@ pluralizeListTitles = false
 
 [params]
   description = "About programming and about everything else"
-
-[[menu.main]]
-    name = "KB"
-    identifier = "knowledgebase"
-    url = "/knowledgebase/"
