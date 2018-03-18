@@ -25,4 +25,4 @@ public static class TcpUtilities
 }
 ```
 
-_Image by [Curriculum_Photografia](https://pixabay.com/en/port-waters-travel-transport-system-3212390/)_
+_Image by [CurriculumPhotografia](https://pixabay.com/en/port-waters-travel-transport-system-3212390/)_
