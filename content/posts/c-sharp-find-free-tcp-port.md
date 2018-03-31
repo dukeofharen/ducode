@@ -2,7 +2,7 @@
 title: "C# Find Free TCP Port"
 date: 2018-03-18T21:29:27+01:00
 draft: false
-featured_image: "free-tcp-port.png"
+featured_image: "headers/c-sharp.jpg"
 tags: ["c-sharp", ".net", ".net core"]
 categories: ["c-sharp", ".net", ".net core"]
 ---
@@ -24,5 +24,3 @@ public static class TcpUtilities
    }
 }
 ```
-
-_Image by [CurriculumPhotografia](https://pixabay.com/en/port-waters-travel-transport-system-3212390/)_

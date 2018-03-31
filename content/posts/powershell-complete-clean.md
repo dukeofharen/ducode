@@ -2,7 +2,7 @@
 title: "Powershell Complete Clean"
 date: 2017-12-17T22:54:33+01:00
 draft: false
-featured_image: "powershell-clean.png"
+featured_image: "headers/powershell.jpg"
 tags: ["powershell", ".net"]
 categories: ["powershell", ".net"]
 ---
@@ -16,5 +16,3 @@ Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fulln
 ```
 
 From the folder this script is executed in, it searches recursively to all folders named `bin` or `obj` and deletes those folders. For me, this fixes the nonsensical build errors in Visual Studio in about 90% of the cases.
-
-_Image by [RyanMcGuire](https://pixabay.com/en/laundry-washing-machines-housewife-413688/)_

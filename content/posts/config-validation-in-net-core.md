@@ -2,7 +2,7 @@
 title: "Configuration validation in .NET Core"
 date: 2018-01-21T20:08:02+01:00
 draft: false
-featured_image: "header-config-validation.jpg"
+featured_image: "headers/dotnet-core.jpg"
 tags: [".net core", "c#"]
 categories: [".net core"]
 ---
@@ -315,5 +315,3 @@ There's nothing more to it than this. This is a nice example of how two existing
 Oh yeah, not focussed on in this article, but it is really easy to build a few unit tests for your configuration to check a few scenarios.
 
 I've uploaded the complete source code to my GitHub account on <https://github.com/dukeofharen/ducodes/tree/master/ConfigValidationExample>.
-
-_Image by [faikerdogan](https://pixabay.com/en/marine-water-ship-boat-port-beach-3084143/)_
