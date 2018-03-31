@@ -1,8 +1,38 @@
 ---
 title: "About"
-date: 2017-12-16T22:35:12+01:00
+date: 2018-03-31T18:56:10+01:00
 draft: false
 menu: "main"
 ---
 
-This page is freakishly empty right now. Not because I've got nothing to say about myself, but because I want this page to be the centerpiece of my website. Stay tuned for more.
+*Duco Winterwerp, North Netherlands based software engineer, primarily working with ASP.NET (Core), SQL Server, Windows and several frontend technologies*
+
+<img src="/duco.jpg" style="width:200px;" />
+
+Currently working at [Quintor](https://www.quintor.nl).
+
+## Experience
+- Microsoft stack
+  - ASP.NET (Core)
+  - WCF
+  - SQL Server
+  - Visual Studio (Code)
+  - Windows
+  - WinForms / WPF
+  - Xamarin
+  - PowerShell
+- Frontend
+  - Vue.js
+  - React
+  - ASP.NET Razor
+- Other
+  - Python
+  - GIT
+  - Webdesign
+  - SCRUM / Agile projects
+
+## Get in touch
+- [LinkedIn](https://www.linkedin.com/in/ducowinterwerp/)
+- [Twitter](https://twitter.com/ducowinterwerp)
+- [GitHub](https://github.com/dukeofharen/)
+- [Mail](mailto:mail@ducode.org)
