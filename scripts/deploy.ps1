@@ -1,3 +1,11 @@
+param(
+    [string]$relativeLocalDirectory = "..\public",
+    [string]$remoteDirectory = "/private_html",
+    [string]$ftpHost = "ducode.org",
+    [string]$ftpUsername,
+    [string]$ftpPassword
+)
+
 $ErrorActionPreference = 'Stop'
 
 function FileTransferred
@@ -66,19 +74,19 @@ Add-Type -Path $winscpType
 
 $sessionOptions = New-Object WinSCP.SessionOptions -Property @{
     Protocol = [WinSCP.Protocol]::Ftp
-    HostName = $env:ftp_host
-    UserName = $env:ftp_username
-    Password = $env:ftp_password
+    HostName = $ftpHost
+    UserName = $ftpUsername
+    Password = $ftpPassword
 }
 
 $session = New-Object WinSCP.Session
 try
 {
-    $localDirectory = Join-Path -Path $PSScriptRoot $env:relative_local_directory
+    $localDirectory = Join-Path -Path $PSScriptRoot $relativeLocalDirectory
     Write-Host "Public directory: $localDirectory"
     $session.add_FileTransferred( { FileTransferred($_) } )
     $session.Open($sessionOptions)
-    $synchronizationResult = $session.SynchronizeDirectories([WinSCP.SynchronizationMode]::Remote, $localDirectory, $env:remote_directory, $True, $True)
+    $synchronizationResult = $session.SynchronizeDirectories([WinSCP.SynchronizationMode]::Remote, $localDirectory, $remoteDirectory, $True, $True)
     $synchronizationResult.Check()
 }
 finally

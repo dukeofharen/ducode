@@ -6,4 +6,4 @@ pluralizeListTitles = false
 
 [params]
   description = "About programming and about everything else"
-  recent_posts_number = 10
+  recent_posts_number = 100
