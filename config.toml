@@ -7,3 +7,4 @@ pluralizeListTitles = false
 [params]
   description = "About programming and about everything else"
   recent_posts_number = 100
+  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
