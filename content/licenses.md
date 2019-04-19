@@ -19,5 +19,6 @@ This site was built using [Hugo](https://gohugo.io/).
 * [internet image by geralt](https://pixabay.com/illustrations/browser-web-www-computer-773215/)
 * [window image by msandersmusic](https://pixabay.com/photos/stained-glass-spiral-circle-pattern-1181864/)
 * [earth image by PIRO4D](https://pixabay.com/illustrations/earth-planet-world-globe-space-1617121/)
+* [coastal town photo by Kookay](https://pixabay.com/photos/italy-sea-houses-cinque-terre-4093227/)
 
 If I forgot any tributes, please let me know.
