@@ -7,6 +7,10 @@ tags: [".net", "tutorial", "mvc", "mysql", "url shortener"]
 categories: [".net", "tutorial"]
 ---
 
+**Updated on 2019-04-19**
+
+Even though this code is very usable if you would like to learn about ASP.NET MVC, ASP.NET Core is the way to go for new projects. I might write this tutorial for ASP.NET Core at a certain point.
+
 **[The code is available on GitHub](https://github.com/dukeofharen/shortnr.net)**
 
 A few months ago, I've written a tutorial on how to create a URL shortener using Node.js, Express and MySQL (<[root-url]/url-shortener-in-node-js-express-js-mysql-tutorial-learning-by-doing.html>). Since a few months, I'm a full time ASP.NET developer (using ASP.NET MVC & WebAPI) and thought it would be nice to write the tutorial one more time, but now using the Microsoft stack of technologies. I think the stack might be a bit hard for beginners (in comparison to Node.js / JavaScript), but I think the fact that you get to use Visual Studio, you have tape safety and compile time feedback makes up for that; I think you're way more productive on the long run. I think a URL shortener is complex enough to give you a global idea of the ASP.NET framework and gives you just the right knowledge to build something more complex.
@@ -237,7 +241,7 @@ Search and install the following packages. I'm going to describe in which projec
 	*   Data
 	*   Entities
 	*   Web
-*	**Mysql.Data** & **Mysql.Data.Entity**: the MySQL driver and the connector for Entity Framework.
+*	**MySql.Data.EntityFramework**: the MySQL driver and the connector for Entity Framework.
 	*   Business
 	*   Data
 	*   Entities
@@ -247,7 +251,7 @@ Search and install the following packages. I'm going to describe in which projec
 	*   Data
 	*   Entities
 	*   Web
-*	**Unity**, **Unity bootstrapper for ASP.NET MVC** & **Unity.WebAPI**: this is an inversion of control (IoC) for ASP.NET. It is used for loose coupled web applications. I will explain this later on.
+*	**Unity**, **Unity.Mvc** & **Unity.AspNet.WebApi**: this is an inversion of control (IoC) for ASP.NET. It is used for loose coupled web applications. I will explain this later on.
 	*   Web
 
 When installing Unity for both Web API and MVC, you might get a file conflict. Just press overwrite. You might get some errors regarding a method that doesn't exist. Replace the class UnityConfig with this class:
@@ -268,7 +272,6 @@ When installing Unity for both Web API and MVC, you might get a file conflict. J
 
 		public static void RegisterTypes(IUnityContainer container)
 		{
-			GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
 		}
 	}
 
