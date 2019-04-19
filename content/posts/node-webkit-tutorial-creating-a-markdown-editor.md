@@ -1,5 +1,5 @@
 ---
-title: "Node Webkit Tutorial Creating a Markdown Editor"
+title: "Node Webkit (NW.js) tutorial: creating a Markdown editor"
 date: 2015-02-21T18:13:43+02:00
 draft: false
 featured_image: "headers/node.jpg"
