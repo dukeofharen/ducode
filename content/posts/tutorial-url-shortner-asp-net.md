@@ -1,5 +1,5 @@
 ---
-title: "Tutorial Url Shortner Asp Net"
+title: "Tutorial: Build A URL Shortener with ASP.NET MVC"
 date: 2015-05-25T12:00:00+02:00
 draft: false
 featured_image: "headers/aspnet.jpg"
