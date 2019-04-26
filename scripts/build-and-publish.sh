@@ -1,6 +1,6 @@
 #!/bin/bash
-set -e
-set -u
+DIR="$(dirname "$0")"
+cd $DIR
 
 HASH_PATH=/tmp/ducode_hash
 
